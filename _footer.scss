@@ -1,0 +1,21 @@
+.footer {
+    background-color: grey;
+    width: 100%;
+    margin-bottom: -50px;
+    padding: .4rem;
+    text-align: center;
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__item {
+        margin: 12px auto;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: normal;
+        font-style: normal;
+    }
+}

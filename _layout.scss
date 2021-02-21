@@ -1,0 +1,91 @@
+.grid__container {
+    width: calc(100% - 50px);
+    margin: $center;
+    border: none;
+    padding: 2rem;
+    display: grid;
+    grid-template-areas: 
+      'header' 'nav' 'main' 'aside' 'footer'
+    ;
+}
+// grid areas.
+.header {
+    grid-area: header;
+}
+.nav {
+    grid-area: nav;
+}
+.main {
+    grid-area: main;
+}
+.aside {
+    grid-area: aside;
+}
+.footer {
+    grid-area: footer;
+}
+
+// media queries.
+
+// for portrait tablets and medium smartphones.
+@media only screen and (min-width: 600px) and (max-width: 750px) {
+    .grid__container {
+        width: 95%;
+        margin: $center;
+        border: none;
+        padding: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 25% 75%;
+        grid-template-areas: 
+          'header header header'
+          'nav main main'
+          'nav main main'
+          'aside aside aside'
+          'footer footer footer'
+        ;
+    }
+    
+    .nav {
+        background-color: wheat;
+
+        &__list {
+            margin-top: 10vh;
+            list-style-type: none;
+            display: list-item;
+        }
+    }
+    
+}
+
+// for desktop.
+@media only screen and (min-width: 750px) {
+    .grid__container {
+        width: 95%;
+        margin: $center;
+        border: none;
+        padding: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 25% 75%;
+        grid-template-areas: 
+          'header header header'
+          'nav main main'
+          'nav main main'
+          'nav aside aside'
+          'footer footer footer'
+        ;
+    }
+    
+    .nav {
+        background-color: wheat;
+
+        &__list {
+            margin-top: 10vh;
+            list-style-type: none;
+            display: list-item;
+        }
+    }
+    
+}
+
